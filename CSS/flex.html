@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .flex{
+        width: 100vw;
+        height: 100vh;
+        background-color: lemonchiffon;
+        margin: 20px;
+        /* flex-wrap: wrap; */
+        display: flex;
+        /* justify-content: center; */
+        /* justify-content: space-around; */
+        /* align-items: center; */
+        /* align-content: center; */
+    }
+    .box1,.box2,.box3,.box4,.box5,.box6{
+        margin: 10px;
+        width: 150px;
+        height: 150px;
+        background-color: lightcoral;
+        /* align-content: center; */
+    }
+
+    .box1{
+        /* flex-grow:2; */
+        flex-shrink: 1;
+    }
+
+    .box1{
+        /* order: 1; */
+    }
+    .box2{
+        /* flex-basis: 300px; */
+    }
+
+
+</style>
+<body>
+    <div class="flex">
+        <div class="box1">BOX1</div>
+        <div class="box2">BOX2</div>
+        <div class="box3">BOX3</div>
+        <div class="box4">BOX4</div>
+        <div class="box5">BOX6</div>
+        <div class="box6">BOX7</div>
+    </div>
+</body>
+</html>
