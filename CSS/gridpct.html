@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 800px;
+            height: 500px;
+            background-color: bisque;
+            display: grid;
+            grid-template-areas:
+            "box1 box1 box1 box1 box1 box1 box1 box1 box1 box1 box1 box1"
+            "box2 box2 box2 box2 box2 box2 box3 box3 box3 box3 box3 box3";
+        }
+
+        .box {
+            background-color: blue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            border: 1px solid white;
+        }
+
+        .box1 { grid-area: box1; }
+
+        .box2 { grid-area: box2; }
+        .box3 { grid-area: box3; }
+
+        .box4 { grid-area: box4; }
+        .box5 { grid-area: box5; }
+        .box6 { grid-area: box6; }
+
+        .box7 { grid-area: box7; }
+        .box8 { grid-area: box8; }
+        .box9 { grid-area: box9; }
+        .box10 { grid-area: box10; }
+
+        .box11 { grid-area: box11; }
+        .box12 { grid-area: box12; }
+        .box13 { grid-area: box13; }
+        .box14 { grid-area: box14; }
+        .box15 { grid-area: box15; }
+        .box16 { grid-area: box16; }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box box1">Box 1</div>
+
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+
+        <div class="box box4">Box 4</div>
+        <div class="box box5">Box 5</div>
+        <div class="box box6">Box 6</div>
+
+        <div class="box box7">Box 7</div>
+        <div class="box box8">Box 8</div>
+        <div class="box box9">Box 9</div>
+        <div class="box box10">Box 10</div>
+
+        <div class="box box11">Box 11</div>
+        <div class="box box12">Box 12</div>
+        <div class="box box13">Box 13</div>
+        <div class="box box14">Box 14</div>
+        <div class="box box15">Box 15</div>
+        <div class="box box16">Box 16</div>
+    </div>
+</body>
+
+</html>
