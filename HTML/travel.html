@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: gray;
+            padding: 10px 20px;
+            position: sticky;
+            top:0px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .link a {
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            font-size: large;
+            transition: 0.3s;
+        }
+
+        .link a:hover {
+            color: yellow;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 80vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            background-color: blue;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: darkblue;
+            cursor: pointer;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .destination {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            background: #f9f9f9;
+            margin-bottom: 50px;
+            gap: 30px;
+        }
+
+        .destination h1 {
+            font-size: 55px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .card {
+            width: 300px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 10px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px 10px 0px 0px;
+            object-fit: cover;
+        }
+
+        .card p {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .footer {
+            width: 100vw;
+            height: 250px;
+            display: grid;
+            grid-template-areas:
+                "one two three three"
+                "four four four four";
+            background-color: grey;
+            color: white;
+        }
+
+        .footer input {
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .one,
+        .two,
+        .three {
+            grid-area: one;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 20px;
+            padding-left: 100px;
+        }
+
+        .two {
+            grid-area: two;
+            height: 200px;
+
+        }
+
+        .three {
+            grid-area: three;
+            height: 200px;
+            padding-left: 100px;
+        }
+
+        .four {
+            grid-area: four;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: large;
+        }
+
+        .line {
+            border: 2px solid white;
+            width: 50px;
+            height: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                Travel Logo
+            </div>
+            <div class="link">
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Destination</a>
+            </div>
+        </div>
+
+        <div class="hero">
+            <video autoplay muted loop>
+                <source src="https://videos.pexels.com/video-files/32429353/13831664_2560_1440_60fps.mp4"
+                    type="video/mp4">
+            </video>
+            <h1>Explore The Mountain With Us</h1>
+            <p>Join us for an unforgettable adventure in the mountains.</p>
+            <div>
+                <button>Book Now</button>
+                <button>Explore More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="destination">
+        <h1>Our Destination</h1>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg" alt="">
+                <p><b>Destination 1</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Explore</button>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg" alt="">
+                <p><b>Destination 2</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Explore</button>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg" alt="">
+                <p><b>Destination 3</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Explore</button>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2265876/pexels-photo-2265876.jpeg" alt="">
+                <p><b>Destination 4</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button>Explore</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="one">
+            <h2>Travel Pvt.</h2>
+            <p>About Us</p>
+            <p>Why Chossen us</p>
+            <p>Priority</p>
+            <p>Termination</p>
+        </div>
+        <div class="two">
+            <h2>Resources</h2>
+            <p>Privacy Policy</p>
+            <p>Term and Condition</p>
+            <p>Blog</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="three">
+            <h1>Travel Logo</h1>
+            <p>Subscribe our Website</p>
+            <div>
+                <input type="email" placeholder="Enter your Email...">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="four">
+            <div class="line"></div>
+            <p> Copyright@1234 </p>
+            <div class="line"></div>
+        </div>
+    </div>
+</body>
+
+</html>
